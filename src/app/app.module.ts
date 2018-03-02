@@ -12,6 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProductsComponent } from './products/products.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { StoreComponent } from './store/store.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProductsComponent,
     HomePageComponent,
     NavbarComponent,
+    StoreComponent,
     
   ],
   imports: [
@@ -45,6 +47,10 @@ import { NavbarComponent } from './navbar/navbar.component';
       {
         path: '',
         component: HomePageComponent
+      },
+      {
+        path: 'store',
+        component: StoreComponent
       }
     ])
   ],

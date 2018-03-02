@@ -22,8 +22,10 @@ password: any;
 
   login(){
   this.loginService.login(this.username,this.password).subscribe(
-      res => {console.log(res)
-      //this.router.navigateByUrl('')
+      res => {
+        console.log(res);
+        if(res.success){
+      this.router.navigateByUrl('')}
       }
 
     );

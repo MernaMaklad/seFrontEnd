@@ -26,8 +26,10 @@ comp:any;
     console.log("pass " + this.password)
 
     this.signupService.createUser(this.username,this.password,this.comp).subscribe(
-      res => {console.log(res)
-      //this.router.navigateByUrl('')
+      res => {console.log(res);
+        if((res.msg)==="user was created successfully."){
+          this.router.navigateByUrl('')
+          }
       }
 
     );

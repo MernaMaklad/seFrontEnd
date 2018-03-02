@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" >
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -7,12 +7,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a  [routerLink]="['/dashboard']"><img src="../../assets/imgs/logo.jpg"  class="logoimg"></a>
-          <a class="navbar-brand" [routerLink]="['/dashboard']">31-Bay</a>
+          <a  [routerLink]="['']"><img src="../../assets/imgs/logo.jpg"  class="logoimg" ></a>
+          <a class="navbar-brand" [routerLink]="['']">31-Bay</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div id="navbar" class="collapse navbar-collapse" >
           <ul class="nav navbar-nav navbar-left">
-            <li><a [routerLink]="['/dashboard']">Home</a></li>
+            <li><a [routerLink]="['']">Home</a></li>
+            <li><a [routerLink]="['store']">Store</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
