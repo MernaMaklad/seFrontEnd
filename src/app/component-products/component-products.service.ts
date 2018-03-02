@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment} from '../../environments/environment'
-import { StoreComponent } from './store.component';
+import { ComponentProductsComponent } from './component-products.component';
 import { AppService } from '../app.service';
 @Injectable()
-export class StoreService {
+export class ComponentProductsService {
 
   constructor(private httpClient: HttpClient,private appService: AppService) { }
 
-
-  getAllProducts(){
+  getCompProducts(comp){
     
   
-    return this.httpClient.get(
-      'http://localhost:3000/api/product/getProducts',{
+    return this.httpClient.post(
+      'http://localhost:3000/api/user/FindProductByComponent',{
         
+        "component": comp
       }
     )
     
   }
-
 }

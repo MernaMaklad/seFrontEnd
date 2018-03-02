@@ -11,9 +11,44 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductsComponent implements OnInit {
   products:any;
+  settings:any;
   constructor(private productsService: ProductsService,private router: Router) { }
 
   ngOnInit() {
+
+
+this.settings = {
+  columns: {
+    createdAt: {
+      title: 'createdAt'
+    },
+    updatedAt: {
+      title: 'updatedAt'
+    },
+    _id: {
+      title: '_id'
+    },
+    name: {
+      title: 'name'
+    },
+    price: {
+      title: 'price'
+    },
+    userId: {
+      title: 'userId'
+    },
+    seller_name: {
+      title: 'seller_name'
+    },
+    component: {
+      title: 'component'
+    }
+  }
+};
+
+
+
+
 
     this.productsService.getProducts().subscribe(
       res => {console.log(res);

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { LoginService } from './login.service';
 import { AppService } from '../app.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -27,6 +28,7 @@ password: any;
         console.log(res);
         if(res.success){
           this.appService.setUserid(res.user_id);
+          this.appService.setComp(res.user_component);
           console.log(this.appService.getUserid());
       this.router.navigateByUrl('')}
       }

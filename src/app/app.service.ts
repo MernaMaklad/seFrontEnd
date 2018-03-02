@@ -4,9 +4,11 @@ import { Injectable } from '@angular/core';
 export class AppService {
 username;
 userid;
+comp;
   constructor() {
     this.username="";
     this.userid="";
+    this.comp="";
 
    }
 
@@ -27,4 +29,13 @@ userid;
   getUserid(){
     return this.userid;
   }
+
+ setComp(val:String){
+    this.comp=val;
+  }
+
+  getComp(){
+    return this.comp;
+  }
+
 }

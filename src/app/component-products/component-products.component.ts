@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { StoreService } from './store.service';
+import { ComponentProductsService } from './component-products.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AppService } from '../app.service';
 
 @Component({
-  selector: 'app-store',
-  templateUrl: './store.component.html',
-  styleUrls: ['./store.component.css'],
-  providers: [StoreService]
+  selector: 'app-component-products',
+  templateUrl: './component-products.component.html',
+  styleUrls: ['./component-products.component.css'],
+  providers: [ComponentProductsService]
 })
-export class StoreComponent implements OnInit {
-  title = 'Products';
- 
+export class ComponentProductsComponent implements OnInit {
+
 allproducts:any;
 settings:any;
-  constructor(private storeService: StoreService,private router: Router) { }
+constructor(private componentProductsService: ComponentProductsService,private router: Router,private appService: AppService) { }
 
   ngOnInit() {
 this.settings = {
@@ -48,7 +48,7 @@ this.settings = {
 
 
 
-    this.storeService.getAllProducts().subscribe(
+    this.componentProductsService.getCompProducts(this.appService.getComp()).subscribe(
       res => {console.log(res);
         this.allproducts=res;
         console.log("ashour gded");
