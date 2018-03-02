@@ -1,0 +1,22 @@
+ 
+.loginForm{
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    padding-top: 15%;
+    padding-left: 25%;
+    left: 0;
+    right: 0;
+ 
+}
+button{
+    width: 50%;
+
+}
+ 
+
+
+ ::placeholder{
+     text-align: center;
+     opacity: 1;
+ }

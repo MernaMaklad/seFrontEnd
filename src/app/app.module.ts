@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -20,15 +20,17 @@ import { NavbarComponent } from './navbar/navbar.component';
     SignupComponent,
     ProductsComponent,
     HomePageComponent,
-    NavbarComponent
+    NavbarComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
-        path: '',
+        path: 'login',
         component: LoginComponent
       },
       {
@@ -36,11 +38,11 @@ import { NavbarComponent } from './navbar/navbar.component';
         component: SignupComponent
       },
       {
-        path: 'dashboard/products',
+        path: 'products',
         component: ProductsComponent
       },
       {
-        path: 'dashboard',
+        path: '',
         component: HomePageComponent
       }
     ])

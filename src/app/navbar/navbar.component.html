@@ -7,6 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a  [routerLink]="['/dashboard']"><img src="../../assets/imgs/logo.jpg"  class="logoimg"></a>
           <a class="navbar-brand" [routerLink]="['/dashboard']">31-Bay</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -15,7 +16,8 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a [routerLink]="['']">Login</a></li>
+            <li></li>
+            <li><a [routerLink]="['login']">Login</a></li>
             <li><a [routerLink]="['/register']">Register</a></li>
           </ul>
         </div><!--/.nav-collapse -->
