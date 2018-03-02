@@ -11,7 +11,7 @@ export class LoginService {
    }
 login(username, password){
     return this.httpClient.post(
-      environment.apiUrl + '/user/Login',{
+      'http://localhost:3000/api/user/Login',{
         "username":username,
         "password": password
       }

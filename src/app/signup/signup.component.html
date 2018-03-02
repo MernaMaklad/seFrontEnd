@@ -7,20 +7,22 @@
 <form  class="loginForm">
   <div class="form-group">
    
-    <input type="text"  class="form-control" id="email" placeholder="Username">
+    <input type="text" name="username" [(ngModel)]="username" class="form-control" id="email" placeholder="Username">
   </div>
   <div class="form-group">
     
-    <input type="password"  class="form-control" id="pwd" placeholder="Password">
+    <input type="password" name="password" [(ngModel)]="password" class="form-control" id="pwd" placeholder="Password">
   </div>
-   <div class="form-group">
+   <div class="form-group" >
     
-    <select >
+    <select [(ngModel)]="comp" name="comp">
   <option value="1">Component1</option>
   <option value="2">Component2</option>
 
 </select>
   </div>
-  <button type="submit" class="btn btn-primary">Sign Up</button>
+  <button type="submit" (click)="signup()" class="btn btn-primary">Sign Up</button>
 </form>
 </body></html>
+
+
